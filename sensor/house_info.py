@@ -12,10 +12,10 @@ class HouseInfo:
                 field_data.append(record[field])
         return field_data
     
-    def get_data_by_date(self,rec_data,rec_date= date.today()):
+    def get_data_by_date(self,field,rec_date= date.today()):
         field_data = []
         for record in self.data:
             if date.strftime(rec_date,"%m/%d/%y") == record["date"]:
-                field_data.append(record[rec_data])
+                field_data.append(record[field])
         return field_data
 
